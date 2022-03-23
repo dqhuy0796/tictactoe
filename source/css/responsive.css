@@ -1,0 +1,49 @@
+@media (max-width: 767px) {
+    .game__board{
+        padding: 10px;
+        width: 320px;
+        height: 320px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    .game__cell .o {
+        border-width: 10px;
+    }
+    .game__cell .x:before{
+        font-size: 55px;
+    }
+    .player .name{
+        font-size: 2.4rem;
+    }
+    .gameover .message__text{
+        padding: 24px 4px;
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .game__board{
+        padding: 15px;
+        width: 390px;
+        height: 390px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+    }
+    .game__cell .o {
+        border-width: 13px;
+    }
+    .game__cell .x:before{
+        font-size: 72px;
+    }
+    .player .name{
+        font-size: 3.2rem;
+    }
+    .gameover .message__text{
+        padding: 24px 4px;
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1024px) {
+
+}

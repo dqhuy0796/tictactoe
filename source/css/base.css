@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 62.5%;
+    font-weight: 400;
+}
+:root{
+    --primary: #ff9999;
+    --secondary: #393939;
+    --text: #292929;
+    --border: #cccccc;
+
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #ff1234;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #ffffff;
+    --dark-gray: #343434;
+    --gray: #656565;
+    --light-gray: #dedede;
+    --light-pink: #ff999a;
+    --light-green: #a7e280;
+    --light-blue: #c2dffd;
+    --light-yellow: #f9e296;
+    --light-purple: #9a99ff;
+
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+
+    --light: #f0f0f0;
+    --lighter: #fafafa;
+    --dark: #595959;
+    --darker: #191919;
+}
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--light);
+    box-shadow: inset 2px 0 5px var(--gray);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid var(--gray);
+    background: var(--light);
+}
+::-webkit-scrollbar-thumb:hover {
+    border: 1px solid var(--gray);
+    background: var(--dark);
+}
+
+@keyframes grow-up{
+    from    { opacity: 0.5; transform: scale(0); } 
+    to      { opacity: 1; transform: scale(100%); }
+}
+@keyframes float-up{
+    from    { transform: translateY(100%); } 
+    to      { transform: translateY(0); }
+}
+@keyframes pop-up{
+    from    { transform: scale(0); } 
+    to      { transform: scale(100%); }
+}

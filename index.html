@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./source/css/base.css">
+    <link rel="stylesheet" href="./source/css/main.css">
+    <link rel="stylesheet" href="./source/css/responsive.css">
+    <link rel="shortcut icon" href="./source/icon/icon-16.png" type="image/png"/>
+    <link rel="icon" sizes="16x16" href="./source/icon/icon-16.png">
+    <link rel="icon" sizes="32x32" href="./source/icon/icon-32.png">
+    <link rel="icon" sizes="100x100" href="./source/icon/icon-100.png">
+    <link rel="icon" sizes="200x200" href="./source/icon/icon-200.png">
+    <link rel="icon" sizes="800x800" href="./source/icon/icon-800.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- OPTION -->
+        
+        <div class="option">
+            <form id="option-form" class="option__container" action="">
+                
+                <!-- Input Name -->
+                <div class="option__section player-name">
+                    <p class="title">Tên bạn là?!</p>
+                    <input type="text" name="player-name" placeholder="Một chú gà?!" maxlength="16">
+                </div>
+
+                <!-- Select Player -->
+                <div class="option__section select-player">
+                    <p class="title">Chọn nước đi?!</p>
+                    <label class="radio-container" style="color: #ff1111;">
+                        <span class="content"><i class="fa-solid fa-xmark"></i></span>
+                        <input type="radio" name="radio-player" value="x" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container" style="color: #2a5ce6;">
+                        <span class="content">O</span>
+                        <input type="radio" name="radio-player" value="o">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <!-- Select Difficulty Level -->
+                <div class="option__section select-difficulty-level">
+                    <p class="title">Chọn độ khó?!</p>
+                    <label class="radio-container">
+                        <span class="content">Dễ</span>
+                        <input type="radio" name="radio-difficulty-level" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">
+                        <span class="content">Khó</span>
+                        <input type="radio" name="radio-difficulty-level" value="2" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">
+                        <span class="content">CrabQueen</span>
+                        <input type="radio" name="radio-difficulty-level" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <!-- Submit button -->
+                <input type="submit" class="option__confirm-btn" value="Let's go"></input>
+            </form>
+        </div>
+        
+        <!-- GAME -->
+        
+        <div class="game">
+            <div class="game__area">
+                <div class="game__board">
+                    <div id="0" class="game__cell top left">
+                    </div>
+                    <div id="1" class="game__cell top">
+                    </div>
+                    <div id="2" class="game__cell top right">
+                    </div>
+                    <div id="3" class="game__cell mid left">
+                    </div>
+                    <div id="4" class="game__cell mid">
+                    </div>
+                    <div id="5" class="game__cell mid right">
+                    </div>
+                    <div id="6" class="game__cell bottom left">
+                    </div>
+                    <div id="7" class="game__cell bottom">
+                    </div>
+                    <div id="8" class="game__cell bottom right">
+                    </div>
+                </div>
+            </div>
+            <div class="player__area">
+
+                <!-- Player 1 -->
+                <div class="player player1">
+                    <img src="./source/image/avatar1.png" alt="" class="avatar">
+                    <!-- <div class="bubble-chat">
+                        <p class="chat-message">Gáy đê! Dậy gáy đê! Sao lại không gáy nữa!</p>
+                    </div> -->
+                    <h2 class="name">Player 1</h2>
+                </div>
+
+                <!-- Score board -->
+                <div class="score__area">
+                    <span class="score__item player-score">0</span>
+                    <span class="score__item bot-score">0</span>
+                </div>
+
+                <!-- Player 2 -->
+                <div class="player player2">
+                    <h2 class="name">Player 2</h2>
+                    <img src="./source/image/avatar2.png" alt="" class="avatar">
+                    <!-- <div class="bubble-chat">
+                        <p class="chat-message">Gáy đê! Dậy gáy đê! Sao lại không gáy nữa!</p>
+                    </div> -->
+                </div>
+
+                <!-- Player chat -->
+                <div class="player__chat">
+                    <div class="minimize__btn" onclick="ToggleChatbox()">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="chatbox" style="display: none;">
+                        <div class="chatbox__suggestion">
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
+                        </div>
+                        <div class="chatbox__inputbox">
+                            <input type="text" placeholder="Nhập tin nhắn">
+                            <button class="chatbox__btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RESULT -->
+        
+        <div class="gameover inactive">
+            <div class="message">
+                <p class="message__text">Hoà!!</p>
+                <div class="message__select">
+                    <button class="message__btn continue" onclick="NewGame()">Chiến tiếp</button>
+                    <button class="message__btn restart" onclick="Restart()">Lại từ đầu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./source/script/app.js"></script>
+    <script src="./source/script/algorithm.js"></script>
+</body>
+</html>
