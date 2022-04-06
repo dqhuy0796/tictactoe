@@ -17,7 +17,7 @@
     
     /* Player Area */
     .game{
-        padding: 20px 60px;
+        padding: 20px 0;
         flex-direction: column-reverse;
         justify-content: space-between;
     }
@@ -27,15 +27,17 @@
         justify-content: space-between;
         padding: 8px 24px;
         min-width: none;
-        width: 100%;
+        width: calc(100% - 80px);
         border-radius: 32px;
     }
     #player2{
         padding-left: 60px;
+        margin-left: 60px;
         align-self: flex-start;
     }
     #player1{
         padding-right: 60px;
+        margin-right: 60px;
         align-self: flex-end;
     }
     .player .player__img{
@@ -92,7 +94,7 @@
 
     /* Player Area */
     .game{
-        padding: 40px 80px;
+        padding: 20px 0;
         flex-direction: column-reverse;
         justify-content: space-between;
     }
@@ -101,16 +103,18 @@
         align-items: center;
         justify-content: space-between;
         padding: 8px 24px;
-        min-width: 320px;
-        width: calc(100% * 2 / 3);
+        min-width: none;
+        width: 50%;
         border-radius: 32px;
     }
     #player2{
-        padding-left: 72px;
+        padding-left: 80px;
+        margin-left: 60px;
         align-self: flex-start;
     }
     #player1{
-        padding-right: 72px;
+        padding-right: 80px;
+        margin-right: 60px;
         align-self: flex-end;
     }
     .player .player__img{

@@ -40,7 +40,7 @@ const botPlayers = [
     {
         avatarUrl: "./source/image/crab-queen.jpg",
         level: `<i class="queen fas fa-chess-queen"></i>`,
-        name: "Chíp Thị Hoài",
+        name: "Chíp Chíp Chíp",
     }
 ]
 
