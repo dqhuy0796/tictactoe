@@ -35,12 +35,12 @@ const botPlayers = [
     {
         avatarUrl: "./source/image/rook.jpg",
         level: `<i class="rook fas fa-chess-rook"></i>`,
-        name: "Thạch chiến xa",
+        name: "Thiết chiến xa",
     },
     {
         avatarUrl: "./source/image/crab-queen.jpg",
         level: `<i class="queen fas fa-chess-queen"></i>`,
-        name: "Hoài chíp chíp",
+        name: "Chíp Thị Hoài",
     }
 ]
 

@@ -90,7 +90,7 @@
 
     /* Player Area */
     .game{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .player{
         display: flex;
@@ -98,7 +98,7 @@
         justify-content: space-between;
         padding: 8px 24px;
         min-width: 320px;
-        width: 50%;
+        width: calc(100% * 2 / 3);
         border-radius: 32px;
     }
     #player2{

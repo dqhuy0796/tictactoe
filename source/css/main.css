@@ -247,7 +247,7 @@
 .player{
     position: relative;
     padding: 80px 16px 16px;
-    min-width: 200px;
+    min-width: 250px;
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, 0.1);
@@ -258,7 +258,8 @@
 .player .player__img{
     position: absolute;
     padding: 4px;
-    width: 50%;
+    width: 120px;
+    height: 120px;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
