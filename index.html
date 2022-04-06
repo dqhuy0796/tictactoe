@@ -52,18 +52,18 @@
                 <div class="option__section select-difficulty-level">
                     <p class="title">Chọn độ khó?!</p>
                     <label class="radio-container">
-                        <span class="content">Dễ</span>
-                        <input type="radio" name="radio-difficulty-level" value="1">
+                        <span class="content">Tiểu tốt</span>
+                        <input type="radio" name="radio-difficulty-level" value="0">
                         <span class="checkmark"></span>
                     </label>
                     <label class="radio-container">
-                        <span class="content">Khó</span>
-                        <input type="radio" name="radio-difficulty-level" value="2" checked="checked">
+                        <span class="content">Chiến xa</span>
+                        <input type="radio" name="radio-difficulty-level" value="1" checked="checked">
                         <span class="checkmark"></span>
                     </label>
                     <label class="radio-container">
-                        <span class="content">CrabQueen</span>
-                        <input type="radio" name="radio-difficulty-level" value="3">
+                        <span class="content">Cua chúa</span>
+                        <input type="radio" name="radio-difficulty-level" value="2">
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -76,6 +76,25 @@
         <!-- GAME -->
         
         <div class="game">
+            <!-- Player 1 -->
+            <div id="player1" class="player">
+                <div class="player__img">
+                    <div class="avatar">
+                        <img src="./source/icon/icon-800.png" alt="Player 1">
+                    </div>
+                </div>
+                <div class="player__info">
+                    <div class="player__level">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <p class="player__name">Player 1</p>
+                </div>
+                <div class="player__score">
+                    <span>0</span>
+                </div>
+            </div>
+
+            <!-- Board -->
             <div class="game__area">
                 <div class="game__board">
                     <div id="0" class="game__cell top left">
@@ -98,68 +117,31 @@
                     </div>
                 </div>
             </div>
-            <div class="player__area">
 
-                <!-- Player 1 -->
-                <div class="player player1">
-                    <img src="./source/image/avatar1.png" alt="" class="avatar">
-                    <!-- <div class="bubble-chat">
-                        <p class="chat-message">Gáy đê! Dậy gáy đê! Sao lại không gáy nữa!</p>
-                    </div> -->
-                    <h2 class="name">Player 1</h2>
-                </div>
-
-                <!-- Score board -->
-                <div class="score__area">
-                    <span class="score__item player-score">0</span>
-                    <span class="score__item bot-score">0</span>
-                </div>
-
-                <!-- Player 2 -->
-                <div class="player player2">
-                    <h2 class="name">Player 2</h2>
-                    <img src="./source/image/avatar2.png" alt="" class="avatar">
-                    <!-- <div class="bubble-chat">
-                        <p class="chat-message">Gáy đê! Dậy gáy đê! Sao lại không gáy nữa!</p>
-                    </div> -->
-                </div>
-
-                <!-- Player chat -->
-                <div class="player__chat">
-                    <div class="minimize__btn" onclick="ToggleChatbox()">
-                        <i class="fas fa-comment-dots"></i>
+            
+            <!-- Player 2 -->
+            <div id="player2" class="player">
+                <div class="player__img">
+                    <div class="avatar">
+                        <img src="./source/icon/icon-800.png" alt="Player 1">
                     </div>
-                    <div class="chatbox" style="display: none;">
-                        <div class="chatbox__suggestion">
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                            <p>Non quá non ... Non ơi là non ... Non ơi là non ... Non ơi là non ...</p>
-                        </div>
-                        <div class="chatbox__inputbox">
-                            <input type="text" placeholder="Nhập tin nhắn">
-                            <button class="chatbox__btn">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-
+                </div>
+                <div class="player__info">
+                    <div class="player__level">
+                        <i class="black fas fa-chess-pawn"></i>
                     </div>
+                    <p class="player__name">Player 2</p>
+                </div>
+                <div class="player__score">
+                    <span>0</span>
                 </div>
             </div>
+
         </div>
         
         <!-- RESULT -->
         
-        <div class="gameover inactive">
+        <div class="gameover">
             <div class="message">
                 <p class="message__text">Hoà!!</p>
                 <div class="message__select">
