@@ -116,8 +116,9 @@ function TurnClick(cell){
         // Người chơi đánh vào ô click
         Turn(cell.target.id, human);
         // Nếu cờ chưa hoà thì bot đánh nước tốt nhất
-        if(!TieCheck() || WinCheck(baseBoard, human)!=null) {
-            Turn(NextSpot(Number(level)), bot);
+        if(!TieCheck()) {
+            Turn(NextSpot(), bot);
+            // Turn(NextSpot(Number(level)), bot);
         }
     }
 }
@@ -220,7 +221,8 @@ function WhoIsWinner(who) {
     }, 2000);
 }
 
-// Trả về ô có id là phần tử đứng ở đầu tiên trong mảng những ô chưa được click
+// Trả về nước đi tiếp theo của bot
+
 function NextSpot(level) {
     switch (level) {
         case 0:
@@ -230,11 +232,12 @@ function NextSpot(level) {
         case 2:
             return Minimax(baseBoard, bot).index;
         default:
-            return EmptyCells()[0];
+            return Minimax(baseBoard, bot).index;
     }
 }
 
 // Minimax Algorithms
+
 function Minimax(newBoard, player) {
 	var availableSpots = EmptyCells();
 
