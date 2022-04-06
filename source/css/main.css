@@ -137,7 +137,6 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
-    padding: 40px 80px;
     width: 100%;
     height: 100%;
     background-image: url(../image/web-background.jpg);
@@ -152,7 +151,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 640px;
 }
 .game__board{
     display: flex;

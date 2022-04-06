@@ -116,7 +116,7 @@ function TurnClick(cell){
         // Người chơi đánh vào ô click
         Turn(cell.target.id, human);
         // Nếu cờ chưa hoà thì bot đánh nước tốt nhất
-        if(!TieCheck()) {
+        if(!TieCheck() || WinCheck(baseBoard, human)!=null) {
             Turn(NextSpot(Number(level)), bot);
         }
     }
@@ -127,13 +127,13 @@ function TurnClick(cell){
 function Turn(cellId, player){
     // Xác định ô ở vị trí nào được người chơi clicked
     baseBoard[cellId] = player;
+    // Khi click thì hiện quân của người chơi đó
+    document.getElementById(cellId).innerHTML = player; 
     // Kiểm tra xem nếu đủ điều kiện thắng thì GAMEOVER, nếu không thì tiếp tục
     let gameHasWinner = WinCheck(baseBoard, player);
     if(gameHasWinner){
         GameOver(gameHasWinner);
     }
-    // Khi click thì hiện quân của người chơi đó
-    document.getElementById(cellId).innerHTML = player; 
 }
 
 // Kiểm tra người thắng cuộc
